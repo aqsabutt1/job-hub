@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/job-hub/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jobhub</title>
+    <script type="module" crossorigin src="/job-hub/assets/index-JuxCvUkd.js"></script>
+    <link rel="stylesheet" crossorigin href="/job-hub/assets/index-CFZBEzIh.css">
+  </head>
+  <body>
+    <script>
+      // Restore React Router's clean URL after GitHub Pages sends a deep link
+      // through public/404.html. Vite replaces /job-hub/ during the build.
+      (function () {
+        var search = window.location.search;
+        if (search.indexOf("?/") === 0) {
+          var base = "/job-hub/";
+          var route = search.slice(1);
+          window.history.replaceState(null, "", base.replace(/\/$/, "") + route);
+        }
+      })();
+    </script>
+    <div id="root"></div>
+  </body>
+</html>

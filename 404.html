@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobHub</title>
+    <script>
+      // GitHub Pages serves 404.html for React Router deep links.
+      // Redirect the requested route back to the app entry point so the
+      // BrowserRouter can restore the original URL and render the page.
+      (function () {
+        var base = "/job-hub/";
+        var path = window.location.pathname;
+        var route = path.indexOf(base) === 0 ? path.slice(base.length) : path.replace(/^\//, "");
+        var query = window.location.search || "";
+        var hash = window.location.hash || "";
+        window.location.replace(base + "?/" + route + query + hash);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
